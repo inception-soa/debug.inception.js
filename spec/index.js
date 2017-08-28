@@ -1,9 +1,8 @@
-'use strict';
 /**
  * @file Unit tests for the debug module
  *
  * @author Anand Suresh <anandsuresh@gmail.com>
- * @copyright Copyright (C) 2017 Anand Suresh
+ * @copyright Copyright (C) 2017 Anand Suresh. All rights reserved.
  * @license Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,14 +17,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+'use strict'
 
-const chai = require('chai');
-const expect = chai.expect;
-const debug = require('..');
-
+const {expect} = require('chai')
+const debug = require('..')
 
 describe('Debug', function () {
   it('should be a function', function () {
-    expect(debug).to.be.a('function');
-  });
-});
+    expect(debug).to.be.a('function')
+  })
+})

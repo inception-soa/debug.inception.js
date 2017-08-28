@@ -14,33 +14,40 @@
   "bugs": {
     "url": "git://github.com/inception-soa/inception.debug/issues"
   },
-  "author": "Anand Suresh",
   "contributors": [
     {
       "name": "Anand Suresh",
       "url": "https://github.com/anandsuresh",
       "email": "anandsuresh@gmail.com"
-		}
-	],
+    }
+  ],
   "license": "Apache-2.0",
   "main": "index.js",
   "engines": {
-    "node": "^4.0.0"
+    "node": "^8.0.0",
+    "npm": "^5.0.0"
   },
   "scripts": {
-    "lint": "inception-standard",
+    "lint": "standard",
     "pretest": "npm install && npm run lint",
     "test": "mocha --ui bdd --reporter spec --recursive spec",
     "coverage": "NODE_ENV=test istanbul cover _mocha -- --ui bdd --reporter spec --recursive spec; open coverage/lcov-report/index.html > /dev/null 2>&1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "inception-standard": "^1.0.0",
+    "chai": "^4.1.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "sinon": "^1.17.6"
+    "mocha": "^3.5.0",
+    "mocha-standard": "^1.0.0",
+    "sinon": "^3.2.1",
+    "standard": "^10.0.3"
   },
   "dependencies": {
-    "debug": "^2.3.3"
+    "debug": "^3.0.1"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
   }
 }
